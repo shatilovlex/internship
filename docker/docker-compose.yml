@@ -5,7 +5,7 @@ services:
     build:
       context: ./nginx
     volumes:
-      - ./public:/var/www/public
+      - ./../public:/var/www/public
       - ./nginx/sites:/etc/nginx/conf.d
     ports:
       - 80:80
@@ -18,7 +18,7 @@ services:
     build:
       context: ./php-fpm
     volumes:
-      - ./:/var/www/public
+      - ./../:/var/www/public
     ports:
       - 9000
     depends_on:
