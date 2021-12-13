@@ -47,11 +47,14 @@ RUN docker-php-ext-install opcache && \
 
 RUN rm -rf /var/lib/apt/lists/*
 
+RUN mkdir /var/www/.symfony && chown www-data:1000 /var/www/.symfony
+
 VOLUME ["/var/www"]
 
 WORKDIR /var/www/public
 
+RUN curl -sS https://get.symfony.com/cli/installer | bash
+
 EXPOSE 9000
 
 CMD ["php-fpm"]
-
