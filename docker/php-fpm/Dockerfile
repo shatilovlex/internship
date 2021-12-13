@@ -53,8 +53,6 @@ VOLUME ["/var/www"]
 
 WORKDIR /var/www/public
 
-RUN curl -sS https://get.symfony.com/cli/installer | bash
-
 EXPOSE 9000
 
 CMD ["php-fpm"]
