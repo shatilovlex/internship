@@ -2,7 +2,7 @@ FROM php:8.0-fpm
 
 RUN usermod -u 1000 www-data
 
-COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN export CFLAGS="$PHP_CFLAGS" CPPFLAGS="$PHP_CPPFLAGS" LDFLAGS="$PHP_LDFLAGS" && \
     apt-get update && apt-get install -y \
@@ -47,7 +47,7 @@ RUN docker-php-ext-install opcache && \
 
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /var/www/.symfony && chown www-data:1000 /var/www/.symfony
+RUN chown www-data:1000 /var/www
 
 VOLUME ["/var/www"]
 
