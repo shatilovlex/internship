@@ -1,7 +1,7 @@
 #################
 ### VARIABLES ###
 #################
-FILE=/var/www/.symfony/bin/symfony
+SYMFONY_INSTALLER=/var/www/.symfony/bin/symfony
 SYMFONY_INSTALL_DIR=/var/www/symfony
 DATABASE_URL="DATABASE_URL=mysql://root:testpass@mysql:3306/docker_dev?serverVersion=5.7"
 TEST_DATABASE_URL="DATABASE_URL=mysql://root:testpass@mysql:3306/docker_dev_test?serverVersion=5.7"
@@ -10,7 +10,7 @@ TEST_DATABASE_URL="DATABASE_URL=mysql://root:testpass@mysql:3306/docker_dev_test
 ### 1. INSTALL SYMFONY ###
 ##########################
 
-if [ ! -f "$FILE" ]; then
+if [ ! -f "$SYMFONY_INSTALLER" ]; then
   curl -sS https://get.symfony.com/cli/installer | bash
 fi
 
