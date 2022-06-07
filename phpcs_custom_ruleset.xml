@@ -102,6 +102,7 @@
         <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint"/>
         <exclude name="SlevomatCodingStandard.Numbers.DisallowNumericLiteralSeparator"/>
+        <exclude name="SlevomatCodingStandard.Functions.DisallowNamedArguments"/>
     </rule>
 
     <rule ref="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature">
