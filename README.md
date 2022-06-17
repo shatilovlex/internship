@@ -5,4 +5,4 @@
 3. Скопируйте файл `.env.example` в `.env` командой `cp .env.example .env`
 4. Запустите docker контейнеры командой `docker-compose up -d --build`
 7. Вернитесь в рабочую директорию `cd ..`
-8. Перейдите на [страницу приветствия Symfony](http://localhost/)
+8. Перейдите на [страницу php info](http://localhost/)
